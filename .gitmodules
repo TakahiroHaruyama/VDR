@@ -1,0 +1,3 @@
+[submodule "kmdf_re"]
+	path = kmdf_re
+	url = https://github.com/IOActive/kmdf_re.git
