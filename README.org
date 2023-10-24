@@ -8,16 +8,16 @@
 
 ** Result
 
-.csv
+- result_firmware.org :: Discovered vulnerable drivers with firmware access (allowing arbitrary PIO & MMIO by non-admin users)
 
 ** Tool and Exploit PoCs
 
-- ida_ioctl_propagate.py :: IDAPython script for automating the discovery of vulnerable drivers
+- ida_ioctl_propagate.py :: IDAPython script for automating the discovery of x64 vulnerable drivers
 - ioctl_batch.py :: Python wrapper script to run in IDA batch mode for triage
-- rwf.py :: Firmware erasing PoCs exploiting vulnerable drivers
-- eop_pdfwkrnl*.py :: Elevation of privilege PoCs for the AMD driver PDFWKRNL.sys
-- eop_stdcdrvws64.py :: Elevation of privilege PoC for the Intel driver stdcdrvws64.sys
-- eop_rtport.py :: Elevation of privilege PoC for the Realtek driver rtport.sys
+
+Note: The script will not work for x86 drivers.
+
+The exploit PoCs are located in the PoCs directory. 
 
 ** Reference
 
