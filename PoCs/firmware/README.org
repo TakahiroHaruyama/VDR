@@ -1,0 +1,10 @@
+#+OPTIONS: ^:{}
+
+#+TITLE: Driver Exploit PoCs
+
+** Vulnerable Drivers with Firmware Access
+
+- rwf.py :: Firmware erasing PoC exploiting the six vulnerable drivers
+- eop_pdfwkrnl*.py :: Elevation of privilege PoCs exploiting the AMD driver PDFWKRNL.sys
+- eop_stdcdrvws64.py :: Elevation of privilege PoC exploiting the Intel driver stdcdrvws64.sys
+- eop_rtport.py :: Elevation of privilege PoC exploiting the Realtek driver rtport.sys
