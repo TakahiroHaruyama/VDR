@@ -687,7 +687,7 @@ def auto_int(x):
 def parse_args():
     global g_debug
     
-    parser = argparse.ArgumentParser(description='script desc', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = argparse.ArgumentParser(description='firmware erasing PoC by exploiting vulnerable kernel drivers', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("target", help="target driver ({})".format('/'.join(g_targets)))
     parser.add_argument('-s', '--spibar', type=auto_int, help="specify SPIBAR for buggy IN")
     parser.add_argument("-d", "--debug", action='store_true', help="output debug message")

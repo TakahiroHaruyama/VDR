@@ -10,12 +10,14 @@
 
 - result_firmware.org :: Discovered vulnerable drivers with firmware access (allowing arbitrary PIO & MMIO by non-admin users)
 
-** Tool and Exploit PoCs
+** Tool
 
 - ida_ioctl_propagate.py :: IDAPython script for automating the discovery of x64 vulnerable drivers
 - ioctl_batch.py :: Python wrapper script to run in IDA batch mode for triage
 
 Note: The script will not work for x86 drivers.
+
+** Exploit PoCs
 
 The exploit PoCs are located in the PoCs directory. 
 
