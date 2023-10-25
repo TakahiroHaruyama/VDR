@@ -172,7 +172,7 @@ def read_or_write_by_MMIO(hdev, target_va, src_or_dst, size, write=False):
     DeviceIoControl(hdev, IOCTL_VA2PA, byref(va_then_pa), 8, byref(va_then_pa), 8, byref(bytes_returned), None)
 
     if bytes_returned.value == 8:
-        debug('read_or_write_by_MMIO (GetPhysicalAddress): translated PA = {:#x}'.format(va_then_pa.value))
+        #debug('read_or_write_by_MMIO (GetPhysicalAddress): translated PA = {:#x}'.format(va_then_pa.value))
 
         # MMIO
         buf = BufIntelMMIO(ULARGE_INTEGER(va_then_pa.value), DWORD(size), cast(src_or_dst, LPVOID))

@@ -107,7 +107,7 @@ def run_surface(target, log_path):
 def parse_args():
     global g_debug
     
-    parser = argparse.ArgumentParser(description='script desc', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = argparse.ArgumentParser(description='wrapper script of ida_ioctl_propagate.py for triage', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('target', help="PE file or folder to analyze")
     parser.add_argument("-r", "--recursive", action='store_true', help="find file recursively")
     parser.add_argument("-d", "--debug", action='store_true', help="output debug message")

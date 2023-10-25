@@ -12,10 +12,16 @@
 
 ** Tool
 
-- ida_ioctl_propagate.py :: IDAPython script for automating the discovery of x64 vulnerable drivers
+- ida_ioctl_propagate.py :: IDAPython script for automating static code analysis of x64 vulnerable drivers
 - ioctl_batch.py :: Python wrapper script to run in IDA batch mode for triage
 
 Note: The script will not work for x86 drivers.
+
+You need the 3rd-party WDF type information ([[https://github.com/IOActive/kmdf_re][kmdf_re]]). Please clone with the submodule. 
+
+#+BEGIN_SRC 
+git clone --recurse-submodules https://github.com/TakahiroHaruyama/VDR.git
+#+END_SRC
 
 ** Exploit PoCs
 
