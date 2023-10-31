@@ -4,11 +4,13 @@
 
 ** Writeup
 
-[TBD]
+[[https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html][Static Analysis Automation for Hunting Vulnerable Kernel Drivers]]
 
-** Result
+** Discovered Vulnerable Drivers
 
-- result_firmware.org :: Discovered vulnerable drivers with firmware access (allowing arbitrary PIO & MMIO by non-admin users)
+All give full control of the devices to non-admin users. The list in each file contains driver names, hashes, signer information, other arbitrary read/write vulnerabilities and so on.
+
+- result_firmware.org :: Drivers with firmware access allowing arbitrary port I/O & memory mapped I/O
 
 ** Tool
 
